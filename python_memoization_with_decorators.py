@@ -6,7 +6,7 @@ def memoize(f):
         if x not in memo:
             memo[x] = f(x, string)
             # goes through callback stack
-        # finally returns memo {1: 1, 0: 0, 2: 1, 3: 2, 4: 3} for n = 5
+        # finally returns memo {1: 1, 0: 0, 2: 1, 3: 2, 4: 3} for n = 5 of x memo[x]. # returned required answer
         return memo[x]
     return helper
 
@@ -21,4 +21,4 @@ def fib(n, string):
         return fib(n - 1, "1") + fib(n - 2, "2")
 
 
-print(fib(5, "try"))
+print(fib(8, "try"))
